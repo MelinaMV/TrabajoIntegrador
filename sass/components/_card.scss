@@ -7,6 +7,11 @@
   font-size: 20px;
   background-color: #163943;
   display: block;
+  @media (max-width: 768px) {
+    & {
+        margin-top: 135px;
+    }//nuevo
+}
 }
 .section-cards__header {
   background-color: #163943;
@@ -17,48 +22,59 @@
 
 main {
   display: flex;
-  background-color: #052630;
+  background-color: #163943;
 }
 .card__article {
   display: block;
-  height: 600px;
+  height: 400px;
   margin-top: 0px;
 }
 .card {
-  width: 500px;
+  /* width: 300px;
   margin-right: 120px;
   margin-top: -50px;
   display: flex;
   flex-direction: row;
   margin-bottom: 50px;
   display: flex;
-  padding: 0;
+  padding: 0; */
+  //outline: none;
+    //flex-grow: 4;
+    width: 310px;
+    max-width: 330px;
+    //height: 400px;
+    overflow: hidden;
+    //box-shadow: 0 20px 5px rgba(167, 32, 32, 0.2), 0 0 3px rbga(0,0,0, .4);
+    //border-top-left-radius: 5px;
+    //border-top-right-radius: 5px;
+    transition: all .2s;
+    //background-position-y: 20px;
 }
 
 .card {
   @media (max-width: 768px) {
     & {
-      width: 600px;
+      //width: 600px;
       height: 400px;
-      background-size: 20%;
+      background-size: 30%;
     }
 
     &__article {
       display: block;
-      height: 400px;
+      height: 350px;
       width: 600px;
     }
     .card__image {
       display: block;
-      width: auto;
-      height: 400px;
+      width: 200px;
+      height: 350px;
       background-size: contain;
       background-repeat: no-repeat;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
     .card__content {
       display: block;
-      width: 500px;
+      width: 300px;
       height: 170px;
       padding: 10px auto;
       padding-top: 5px;
@@ -68,38 +84,37 @@ main {
       background-color: #02595296;
     }
     .card__image {
-      background-image: url(../../img/cards/horiz1.jpg);
-      width: 500px;
+      background-image: url(../../img/card2.jpg);
+      width: 300px;
       height: 400px;
-      padding-left: 500px;
-      background-size: cover;
-      border-radius: 20px;
-      display: flex;
+      //padding-left: 500px;
+      //background-size: contain;
+      //border-radius: 20px;
+      display: block;
       box-sizing: border-box;
-      background-position-y: -55px;
+      //background-position-y: -55px;
     }
   }
 }
 .cards-container {
-  display: flex;
+  //display: flex;
   flex-direction: row;
-  position: relative;
-  width: fit-content;
+  //position: relative;
+  //width: fit-content;
   display: flex;
   flex-wrap: wrap;
-  padding: 90px;
+  padding: 15px;
 }
 
 .card__image {
-  display: flex;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: url(../../img/cards/card2.jpg);
-  width: 300px;
-  height: 600px;
-  padding-left: 640px;
-  background-size: cover;
-  border-radius: 20px;
+  display: block;
+  //-moz-box-sizing: border-box;
+  //box-sizing: border-box;
+  background: url(../../img/card2.jpg);
+  width: 330px;
+  height: 400px;
+  padding-left: 650px;
+  border-radius: 10px;
 }
 
 .card__content {
@@ -107,11 +122,11 @@ main {
   border-radius: 20px;
   position: relative;
   top: -200px;
-  padding: 10px 15px;
+  padding: 5px 5px;
   color: white;
   background-color: rgba(4, 86, 100, 0.61);
-  text-align: center;
-  width: 640px;
+  text-align: left;
+  width: 330px;
   height: 170px;
   visibility: hidden;
   opacity: 3;
@@ -121,8 +136,121 @@ main {
   -moz-box-shadow: -19px 17px 41px 16px rgba(0, 48, 59, 0.89);
 }
 .cards-container .card:hover .card__content {
-  margin-top: 30px;
+  margin-top: 20px;
   visibility: visible;
   opacity: 1;
   transition-delay: 0.1s;
 }
+
+
+
+
+
+//maxi
+/* .card {
+    outline: none;
+    flex-grow: 1;
+    width: 220px;
+    max-width: 300px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0,0,0, .2), 0 0 3px rbga(0,0,0, .4);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: all .2s;
+
+    background-color: orange;
+
+    &:hover, 
+    &:focus {
+        -moz-transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03) skewX();
+        -moz-transform-origin: bottom;
+        -webkit-transform-origin: bottom;
+        transform-origin: bottom;
+        box-shadow: 0 7px 8px rgba(0,0,0, .05), 0 3 3px rgba(0,0,0, .01);
+    }
+
+    &:nth-child(5n + 1) {
+        background-image: linear-gradient(to top, #aaafad 0%, #60efff 30%);
+    }
+
+    &:nth-child(5n + 2) {
+        background-image: linear-gradient(to top, #696eff 0%, #f8acff 30%);
+    }
+
+    &:nth-child(5n + 3) {
+        background-image: linear-gradient(to top, #ff1b6b 0%, #45caff 30%);
+    }
+
+    &:nth-child(5n + 4) {
+        background-image: linear-gradient(to top, #ff930f 0%, #fff95b 30%);
+    }
+
+    &:nth-child(5n + 5) {
+        background-image: linear-gradient(to top, #ff0f7b 0%, #f89b29 30%);
+    }
+
+
+    &__image-container {
+        height: 200px;
+        background-color: blue;
+        overflow: hidden;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
+        clip-path: polygon(0 0, 100% 0, 100% 200px, 0 180px);
+    }
+
+    &:hover &__image-container,
+    &:focus &__image-container {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px);
+        clip-path: polygon(0 0, 100% 0, 100% 190px, 0 200px)
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .2s;
+    }
+
+    &:hover &__image,
+    &:focus &__image {
+        transform: scale(1.4) rotate(5deg);
+        transform-origin: center;
+    }
+
+    &__content {
+        padding: 1em;
+    }
+
+    @media (min-width: 1024px) {
+        & {
+            min-width: 240px;
+        }
+    }
+
+    @media (min-width: 426px) and (max-width: 768px) {
+        & {
+            min-width: 400px;
+            max-width: 500px;
+            height: 200px;
+        }
+
+        &__article {
+            display: flex;
+        }
+
+        & &__image-container {
+            width: 40%;
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+        }
+
+        &:hover &__image-container,
+        &:focus &__image-container {
+            width: 40%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+        }
+    }
+
+} */
