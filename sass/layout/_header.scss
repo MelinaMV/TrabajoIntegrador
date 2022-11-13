@@ -45,12 +45,12 @@
              NAV BAR
 ***********************************/
 .nav-bar {
-  font-size: 10px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
-  width: 970px;
-  margin: 50px auto;
-  //order: 1;
+  //width: 970px;
+  //margin: 50px auto;
+  order: 1;
 
   &__nav-list {
     display: flex;
@@ -90,6 +90,7 @@
       border: 2px solid #07c9d3;
       justify-content: center;
       align-items: center;
+      list-style-type: none;
       width: 80%;
       border-radius: 20px;
       height: 100%;
