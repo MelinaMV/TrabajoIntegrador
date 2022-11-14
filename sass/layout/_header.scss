@@ -3,7 +3,6 @@
 ***********************************/
 
 .main-header {
-  height: 300px;
  background: rgb(6, 125, 131);
   background: linear-gradient(
     0deg,
@@ -48,9 +47,7 @@
   font-size: 20px;
   display: flex;
   justify-content: center;
-  //width: 970px;
-  //margin: 50px auto;
-  order: 1;
+
 
   &__nav-list {
     display: flex;
@@ -82,7 +79,7 @@
     & {
       background-color: rgb(7, 109, 128);
       //display: none;
-      //order: -1;
+      order: 1;
     }
     &__nav-link {
       display: flex;
@@ -110,7 +107,8 @@
 
   &__logo-container {
     background-position: center center;
-    background-image: url(../../img/melina-logo.png);
+    background-image: url(../../img/logosinfondo.png);
+    //cambio de imagen
     background-size: 180px auto;
     background-repeat: no-repeat;
     width: 170px;
