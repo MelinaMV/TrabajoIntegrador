@@ -119,8 +119,7 @@ const renderTablaAlta = (validos, productos) => {
 
       // console.warn(productos)
       let html = template({ productos, validos })
-      document.getElementById("listado-productos").innerHTML = html
-    }
+      document.getElementById("listado-productos").innerHTML = html}
   })
 
   xhr.send()
